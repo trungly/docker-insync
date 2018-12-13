@@ -1,3 +1,8 @@
+## 1.4 2018-12-13 <gerold at halvar dot at>
+
+* Now it uses a new parameter to decide if 
+  Insync should not download files when adding account.
+
 ## 1.3 2018-07-28 <dave at tiredofit dot ca>
 
 * Add Zabbix Monitoring Scripts

@@ -50,7 +50,7 @@ if insync-headless get_status | grep 'UNLINKED' > dev/null; then
 
         # Check if Insync should not download files when adding account
         if [[ "${!INSYNC_NO_DOWNLOAD}" == "true" ]]; then
-            INSYNC_NO_DOWNLOAD_PARAM="-n"
+            INSYNC_NO_DOWNLOAD_PARAM="-no-download"
         else
             INSYNC_NO_DOWNLOAD_PARAM=""
         fi
@@ -58,7 +58,11 @@ if insync-headless get_status | grep 'UNLINKED' > dev/null; then
         mkdir -p /data/${!INSYNC_USERNAME}
         echo '** [insync] Adding Account '${!INSYNC_USERNAME}
         echo "/usr/bin/insync-headless add_account -a ${!INSYNC_AUTH_CODE} -p /data/${!INSYNC_USERNAME} -e ${!INSYNC_DOWNLOAD} ${INSYNC_NO_DOWNLOAD_PARAM}"
-        /usr/bin/insync-headless add_account -a ${!INSYNC_AUTH_CODE} -p /data/${!INSYNC_USERNAME} -e ${!INSYNC_DOWNLOAD} ${INSYNC_NO_DOWNLOAD_PARAM}
+        /usr/bin/insync-headless add_account \
+            -a ${!INSYNC_AUTH_CODE} \
+            -p /data/${!INSYNC_USERNAME} \
+            -e ${!INSYNC_DOWNLOAD} \
+            ${INSYNC_NO_DOWNLOAD_PARAM} <<< "yes"
     done
 fi
 /usr/bin/insync-headless set_autostart yes

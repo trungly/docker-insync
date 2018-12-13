@@ -87,15 +87,15 @@ Along with the Environment Variables from the [Base image](https://hub.docker.co
 | `INSYNC1_USERNAME` | Primary Your GDrive Username e.g. `user@gmail.com` |
 | `INSYNC1_AUTH_CODE` | Primary Authorization Code provided by Google |
 | `INSYNC1_DOWNLOAD` | Primary How to download files `link` (.gdoc), `ms-office` (.docx), `open-document` (.odt) - Default `link` |
-| `INSYNC1_NO_DOWNLOAD` | Set if Insync should not download files when adding account. Files to be synced can be set later with the manage_selective_sync command. |
+| `INSYNC1_NO_DOWNLOAD` | Set to "true" if Insync should not download files when adding account. Files to be synced can be set later with the manage_selective_sync command. |
 | `INSYNC2_USERNAME` | Secondary Your GDrive Username e.g. `user@gmail.com` |
 | `INSYNC2_AUTH_CODE` | Secondary Authorization Code provided by Google |
 | `INSYNC2_DOWNLOAD` | Secondary How to download files `link` (.gdoc), `ms-office` (.docx), `open-document` (.odt) - Default `link` |
-| `INSYNC2_NO_DOWNLOAD` | Set if Insync should not download files when adding account. Files to be synced can be set later with the manage_selective_sync command. |
+| `INSYNC2_NO_DOWNLOAD` | Set to "true" if Insync should not download files when adding account. Files to be synced can be set later with the manage_selective_sync command. |
 | `INSYNC3_USERNAME` | Third Your GDrive Username e.g. `user@gmail.com` |
 | `INSYNC3_AUTH_CODE` | Third Authorization Code provided by Google |
 | `INSYNC3_DOWNLOAD` | Third How to download files `link` (.gdoc), `ms-office` (.docx), `open-document` (.odt) - Default `link` |
-| `INSYNC3_NO_DOWNLOAD` | Set if Insync should not download files when adding account. Files to be synced can be set later with the manage_selective_sync command. |
+| `INSYNC3_NO_DOWNLOAD` | Set to "true" if Insync should not download files when adding account. Files to be synced can be set later with the manage_selective_sync command. |
 | `PROXY_MODE` | Use Proxy `TRUE` or `FALSE` - Default `FALSE` |
 | `PROXY_TYPE` | Type of Proxy `HTTP` `SOCKS4` `SOCKS5` |
 | `PROXY_HOST` | Name of Proxy Host e.g. `proxy` |

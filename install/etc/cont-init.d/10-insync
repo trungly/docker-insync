@@ -57,7 +57,7 @@ if insync-headless get_status | grep 'UNLINKED' > dev/null; then
 
         mkdir -p /data/${!INSYNC_USERNAME}
         echo '** [insync] Adding Account '${!INSYNC_USERNAME}
-        /usr/bin/insync-headless add_account -a ${!INSYNC_AUTH_CODE} -p /data/${!INSYNC_USERNAME} -e ${!INSYNC_DOWNLOAD} ${INSYNC_NO_DOWNLOAD_PARAM}
+        /usr/bin/insync-headless add_account -a ${!INSYNC_AUTH_CODE} -p /data/${!INSYNC_USERNAME} -e ${!INSYNC_DOWNLOAD} ${!INSYNC_NO_DOWNLOAD_PARAM}
     done
 fi
 /usr/bin/insync-headless set_autostart yes

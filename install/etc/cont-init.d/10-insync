@@ -50,7 +50,7 @@ if insync-headless get_status | grep 'UNLINKED' > dev/null; then
 
         # Check if Insync should not download files when adding account
         if [[ "${!INSYNC_NO_DOWNLOAD}" == "true" ]]; then
-            INSYNC_NO_DOWNLOAD_PARAM="-no-download"
+            INSYNC_NO_DOWNLOAD_PARAM="--no-download"
         else
             INSYNC_NO_DOWNLOAD_PARAM=""
         fi
